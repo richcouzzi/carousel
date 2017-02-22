@@ -1,0 +1,170 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+@import url("//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.css");
+@import url("//fonts.googleapis.com/css?family=Quicksand:300,400");
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+main, menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, main, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+.carousel {
+  height: 100vh;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100vw; }
+
+.carousel__slide {
+  background-position: center center;
+  background-size: cover;
+  height: 100%;
+  left: 0;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  transition: opacity 800ms linear;
+  width: 100%; }
+
+.carousel__slide--visible {
+  opacity: 1; }
+
+.carousel__caption {
+  position: absolute;
+  color: #fff;
+  font-size: 4vmax;
+  left: 50%;
+  line-height: 4vmax;
+  text-align: center;
+  top: 50%;
+  transform: translate3d(-50%, -50%, 0); }
+
+.carousel__ui {
+  align-items: center;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  padding: 20px 0;
+  position: absolute;
+  width: 100%; }
+
+.carousel__indicator {
+  background-color: rgba(255, 255, 255, 0.25);
+  background-position: center center;
+  border-radius: 100%;
+  cursor: pointer;
+  height: 15px;
+  margin: 0 5px;
+  transform: scale(0.75);
+  transition: background-color, transform 400ms linear;
+  width: 15px; }
+
+.carousel__indicator--active {
+  transform: scale(1);
+  background-color: white; }
+
+.carousel__arrow {
+  align-items: center;
+  color: white;
+  opacity: 0.25;
+  cursor: pointer;
+  display: flex;
+  font-size: 3vmax;
+  justify-content: center;
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: opacity 500ms ease-in-out; }
+
+.carousel__arrow--engaged {
+  opacity: 1; }
+
+.carousel__arrow--left {
+  left: 10px; }
+
+.carousel__arrow--right {
+  right: 10px; }
+
+body {
+  background-color: #999;
+  font-family: 'Quicksand', sans-serif; }
+
+.nav {
+  position: absolute;
+  z-index: 10;
+  padding: 15px;
+  width: 100%; }
+
+.nav__link {
+  color: #fff;
+  font-size: 14px;
+  margin: 0 12px;
+  text-decoration: none;
+  cursor: pointer; }
+
+.nav__link--active {
+  border-bottom: solid 2px; }
+
+.usage {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate3d(-50%, -50%, 0);
+  width: 100%;
+  max-width: 800px;
+  background-color: #fff; }
+
+.usage__copy {
+  padding: 20px;
+  border: solid 1px #eee; }
+
+.usage__note {
+  margin: 20px 0 10px; }
+
+.usage__snippet {
+  background-color: #fffccc;
+  padding: 15px;
+  color: green;
+  font-family: monospace;
+  overflow-x: auto; }
+
+/*# sourceMappingURL=style.css.map */

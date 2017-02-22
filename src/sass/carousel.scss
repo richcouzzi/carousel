@@ -1,0 +1,90 @@
+@import url('//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.css');
+
+.carousel {
+	height: 100vh;
+	left: 0;
+	position: absolute;
+	top: 0;
+	width: 100vw;
+}
+
+.carousel__slide {
+	background-position: center center;
+	background-size: cover;
+	height: 100%;
+	left: 0;
+	opacity: 0;
+	position: absolute;
+	top: 0;
+	transition: opacity 800ms linear;
+	width: 100%;
+}
+
+.carousel__slide--visible {
+	opacity: 1;
+}
+
+.carousel__caption {
+	position: absolute;
+	color: #fff;
+	font-size: 4vmax;
+	left: 50%;
+	line-height: 4vmax;
+	text-align: center;
+	top: 50%;
+	transform: translate3d(-50%, -50%, 0);
+}
+
+
+.carousel__ui {
+	align-items: center;
+	bottom: 0;
+	display: flex;
+	justify-content: center;
+	padding: 20px 0;
+	position: absolute;
+	width: 100%;
+}
+
+.carousel__indicator {
+	background-color: rgba(255, 255, 255, 0.25);
+	background-position: center center;
+	border-radius: 100%;
+	cursor: pointer;
+	height: 15px;
+	margin: 0 5px;
+	transform: scale(0.75);
+	transition: background-color, transform 400ms linear;
+	width: 15px;
+}
+
+.carousel__indicator--active {
+	transform: scale(1);
+	background-color: rgba(255, 255, 255, 1);
+}
+
+.carousel__arrow {
+	align-items: center;
+	color: rgb(255,255,255);
+	opacity: 0.25;
+	cursor: pointer;
+	display: flex;
+	font-size: 3vmax;
+	justify-content: center;
+	position: fixed;
+	top: 50%;
+	transform: translateY(-50%);
+	transition: opacity 500ms ease-in-out;
+}
+
+.carousel__arrow--engaged {
+	opacity: 1;
+
+}
+
+.carousel__arrow--left {
+	left: 10px;
+}
+.carousel__arrow--right {
+	right: 10px;
+}

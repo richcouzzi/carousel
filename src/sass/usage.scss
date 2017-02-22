@@ -1,0 +1,29 @@
+.usage {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate3d(-50%, -50%, 0);
+  width: 100%;
+  max-width: 800px;
+  background-color: #fff;
+
+}
+
+.usage__copy {
+  padding: 20px;
+  border: solid 1px #eee;
+}
+
+.usage__note {
+  margin: 20px 0 10px;
+}
+
+
+.usage__snippet {
+  background-color: #fffccc;
+  padding: 15px;
+  color: green;
+  font-family: monospace;
+  overflow-x: auto;
+
+}

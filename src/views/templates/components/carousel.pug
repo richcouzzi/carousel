@@ -1,0 +1,27 @@
+.carousel
+
+  .carousel__slide(
+    ng-repeat="image in images"
+    ng-style="{'background-image':'url('+ image.src +')'}"
+    ng-class="{'carousel__slide--visible' : image.visible}")
+
+    .carousel__caption {{image.caption}}
+
+    .carousel__ui
+
+      .carousel__indicator(
+        ng-click="goTo($index)"
+        ng-repeat="image in images"
+        ng-class="{'carousel__indicator--active' : image.visible}")
+
+  .carousel__arrow.carousel__arrow--left(
+    hover-class="carousel__arrow--engaged"
+    ng-click="prev()")
+
+      i.fa.fa-chevron-left
+
+  .carousel__arrow.carousel__arrow--right(
+    hover-class="carousel__arrow--engaged"
+    ng-click="next()")
+
+      i.fa.fa-chevron-right

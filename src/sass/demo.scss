@@ -1,0 +1,25 @@
+@import url( '//fonts.googleapis.com/css?family=Quicksand:300,400');
+
+body {
+    background-color: #999;
+    font-family: 'Quicksand', sans-serif;
+}
+
+.nav {
+    position: absolute;
+    z-index: 10;
+    padding: 15px;
+    width: 100%;
+}
+
+.nav__link {
+    color: #fff;
+    font-size: 14px;
+    margin: 0 12px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.nav__link--active {
+    border-bottom: solid 2px;
+}
