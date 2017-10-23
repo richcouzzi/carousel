@@ -16,6 +16,9 @@ const gulp        = require('gulp'),
       watch       = require('gulp-watch'),
       browserSync = require('browser-sync').create();
 
+// gh-pages root
+let dist = 'docs';
+
 // Function to handle errors.
 // Prevents Gulp from stopping.
 var handleError = function(err) {
@@ -32,7 +35,7 @@ gulp.task('sass', () => {
     .pipe(sourcemaps.init({ loadMaps: true }))
     .pipe(sass({ importer: sassImport() }).on('error', handleError))
     .pipe(sourcemaps.write('./'))
-    .pipe(gulp.dest('./app/assets/css'));
+    .pipe(gulp.dest('./' + dist + '/assets/css'));
 });
 
 // Converts ES2015+ to ES5 & Supports Modules
@@ -45,14 +48,14 @@ gulp.task('browserify', () => {
     .pipe(buffer())
     .pipe(sourcemaps.init({loadMaps: true}))
     .pipe(sourcemaps.write('./'))
-    .pipe(gulp.dest('./app/assets/js'));
+    .pipe(gulp.dest('./' + dist + '/assets/js'));
 });
 
 // Converts our .pug files to .html files
 gulp.task('views', () => {
   return gulp.src(['src/views/**/*.pug', '!src/views/partials/**/*.pug'])
     .pipe(pug())
-    .pipe(gulp.dest('./app'));
+    .pipe(gulp.dest('./' + dist ));
 });
 
 // Watches our .scss & .js files for change
@@ -60,13 +63,13 @@ gulp.task('watch', () => {
   watch('./src/sass/**/*.scss', () => { gulp.start('sass'); });
   watch(['./src/js/**/*.js', './package.json'], () => { gulp.start('browserify'); });
   watch('./src/views/**/*.pug', () => gulp.start('views'));
-  watch('./app/**/**', () => { browserSync.reload(); });
+  watch('./' + dist + '/**/**', () => { browserSync.reload(); });
 });
 
 // Runs a simple browser sync server
 gulp.task('server', function(done) {
   browserSync.init({
-    server: "./app",
+    server: "./' + dist + '",
     port: 8080,
     open: false,
     notify: false
